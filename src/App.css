@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav_bar {
+  background-color: #03c197;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav_links_div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  margin-right: 7rem;
 }
-
-.App-link {
-  color: #61dafb;
+.nav_input {
+  border: none !important;
+  width: 17rem !important;
+  padding: 0.2em 0.4em !important;
+  align-items: center !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav_input:focus {
+  box-shadow: none !important;
+}
+.navbar_brand {
+  margin-left: 10rem;
+  font-weight: bolder;
+}
+.nav-item {
+  margin: auto 0.6em;
+}
+.login_Btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
 }
