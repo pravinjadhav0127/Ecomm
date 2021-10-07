@@ -1,3 +1,4 @@
+import "../NavigationBar/Navbar.css";
 import React, { useState } from "react";
 import {
   Collapse,
@@ -16,7 +17,7 @@ import {
   InputGroupAddon,
 } from "reactstrap";
 import { BiSearch, BiShoppingBag } from "react-icons/bi";
-import { BsHeart } from "react-icons/bs";
+import { BsHeart, BsBag } from "react-icons/bs";
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,10 +50,10 @@ const NavBar = (props) => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <BsHeart />
+                <BsHeart className="heart_icon" />
               </NavItem>
               <NavItem>
-                <BiShoppingBag />
+                <BsBag className="bag_icon" />
               </NavItem>
             </Nav>
           </Collapse>

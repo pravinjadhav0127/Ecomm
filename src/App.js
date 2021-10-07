@@ -1,11 +1,13 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import NavBar from "./Pages/Navbar";
+import NavBar from "./Pages/NavigationBar/Navbar";
+import ImageSlider from "./Pages/SliderPage/ImageSlider";
 
 const App = () => {
   return (
     <>
       <NavBar />
+      <ImageSlider />
     </>
   );
 };

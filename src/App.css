@@ -3,34 +3,3 @@
 * {
   font-family: "Quicksand", sans-serif;
 }
-
-.nav_bar {
-  background-color: #03c197;
-}
-.nav_links_div {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 7rem;
-}
-.nav_input {
-  border: none !important;
-  width: 17rem !important;
-  padding: 0.2em 0.4em !important;
-  align-items: center !important;
-}
-.nav_input:focus {
-  box-shadow: none !important;
-}
-.navbar_brand {
-  margin-left: 10rem;
-  font-weight: bolder;
-}
-.nav-item {
-  margin: auto 0.6em;
-}
-.login_Btn {
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 3px;
-}
