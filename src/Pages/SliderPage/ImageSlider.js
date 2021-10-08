@@ -1,35 +1,43 @@
 import { useState } from "react";
 import "../SliderPage/ImageSlider.css";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-const ImageSlider = () => {
+import SliderData from "./SliderData";
+const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
-  //   const length = slides.length;
+  const length = slides.length;
 
-  //   if (!Array.isArray(slides) || slides.length <= 0) {
-  //     return null;
-  //   }
-  const ImgData = [
-    {
-      img: "https://images.pexels.com/photos/5709661/pexels-photo-5709661.jpeg?cs=srgb&dl=pexels-sam-lion-5709661.jpg&fm=jpg",
-    },
-    {
-      img: "https://images.pexels.com/photos/4210860/pexels-photo-4210860.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    },
-    {
-      img: "https://images.pexels.com/photos/3557818/pexels-photo-3557818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-  ];
+  const nextslide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  console.log(current);
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
     <>
-      {ImgData.map((imgObj, index) => {
-        return (
-          <div className="slider">
-            <FaArrowAltCircleRight className="right_arrow" />
-            <FaArrowAltCircleLeft className="left_arrow" />
-            <img src={imgObj.img} alt="offer-img" className="images" />
-          </div>
-        );
-      })}
+      <div className="slider">
+        <FaArrowAltCircleRight className="right_arrow" onClick={nextslide} />
+        <FaArrowAltCircleLeft className="left_arrow" onClick={prevSlide} />
+        {SliderData.map((imgObj, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <img src={imgObj.img} alt="offer-img" className="images" />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
